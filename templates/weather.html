@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     
@@ -12,7 +11,7 @@
 </head>
 <body>
     <div class="nav-container" >
-      <form action="/weather" method="post">
+      <form method="post" action="/">
         <nav class="button">
           <div class="button_div" >
             <input type="text" id="country"  class="no-style-button" name="place" placeholder="Search for places..." required>
@@ -24,7 +23,8 @@
           </div>
         </nav>
       </form>
-  </div>
+    </div>
+
     {% if weather %}
 
     <div class="weather-map">
